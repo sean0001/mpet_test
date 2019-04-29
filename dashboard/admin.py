@@ -4,6 +4,13 @@ from .models import Author
 from dashboard.models import myuser
 from django.contrib.auth.admin import UserAdmin
 from django.contrib import admin
+from django.apps import AppConfig
+
+
+class DashboardConfig(AppConfig):
+    name = 'dashboard'
+
+
 
 
 class testss(admin.ModelAdmin):
@@ -12,7 +19,6 @@ class testss(admin.ModelAdmin):
 
 class test(UserAdmin):
     pass
-
 
 
 
@@ -26,9 +32,6 @@ class AuthorAdmin(admin.ModelAdmin):
 
 
 admin.site.register(myuser)
-
-
-
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
